@@ -108,7 +108,7 @@ const PlaceOrder = () => {
          {/* <LiveMap/> */}
         </div>
         <div className="redirect-delivery-agent">
-          <p>Assign Delivery Agent : <a href="/delivery-agent-live-tracking" target='blank' className='delivery-anchor'>Click Here</a></p>
+          <p>Assign Delivery Agent : <a href='/delivery-agent-live-tracking' target='blank' className='delivery-anchor'>Click Here</a></p>
         </div>
       </div>
     </div>
