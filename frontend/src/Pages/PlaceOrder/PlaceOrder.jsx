@@ -25,7 +25,7 @@ const PlaceOrder = () => {
       setDeliveryAgentInfo((prev)=> ({
         ...prev,[agentId] : {name,phone,ratings}
       }) );
-      console.log(deliveryAgentInfo);
+      
       setCurrentAgentId(agentId);
     });
 
@@ -33,15 +33,6 @@ const PlaceOrder = () => {
       socket.off('agentInfo');
     }
   },[])
-  
-
-  // useEffect(() => {
-  //   if (!deliverydata) {
-  //     navigate('/delivery-info');
-  //   }
-  // }, [deliverydata, navigate]);
-
-  // if (!deliverydata) return null;
 
   useEffect( ()=> {
     const timer = setTimeout(()=> {
@@ -59,15 +50,6 @@ const PlaceOrder = () => {
       <div className="checkout-left">
         <h2 className="section-title">Order Summary</h2>
 
-        {/* <div className="user-info-box">
-          <p><strong>Name:</strong> {deliverydata.name}</p>
-          <p><strong>Phone:</strong> {deliverydata.phone}</p>
-          <p><strong>City:</strong> {deliverydata.city}</p>
-          <p><strong>Pincode:</strong> {deliverydata.pincode}</p>
-          <p><strong>Address:</strong> {deliverydata.address}</p>
-          {deliverydata.notes && <p><strong>Notes:</strong> {deliverydata.notes}</p>}
-        </div> */}
-
         <h3 className="section-subtitle">Items</h3>
         <div className="items-list">
           {food_list.map((item) => {
@@ -79,7 +61,7 @@ const PlaceOrder = () => {
                     <p>{item.name}</p>
                     <p>Qty: {cartItems[item.id]}</p>
                     <p>Price: ${item.price}</p>
-                    {/* <p>Total: ${item.price * cartItems[item.id]}</p> */}
+                    
                   </div>
                 </div>
               );
@@ -124,6 +106,9 @@ const PlaceOrder = () => {
         <div className="tracking-box">
          { deliveryAgentInfo[currentAgentId] ? <LiveMap /> :<div className="spinner">Waiting For Agent's Location....</div> } 
          {/* <LiveMap/> */}
+        </div>
+        <div className="redirect-delivery-agent">
+          <p>Assign Delivery Agent : <a href="/delivery-agent-live-tracking" target='blank' className='delivery-anchor'>Click Here</a></p>
         </div>
       </div>
     </div>

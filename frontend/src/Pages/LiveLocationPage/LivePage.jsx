@@ -10,7 +10,7 @@ const LivePage = () => {
     const socketRef = useRef();
     const navigate = useNavigate();
     useEffect(() => {
-        socketRef.current = io('http://localhost:3001');
+        socketRef.current = io('https://yummygo-backend-w3ho.onrender.com/');
         return () => socketRef.current.disconnect();
     }, []);
     const agentId = uuidv4();
@@ -115,7 +115,7 @@ const LivePage = () => {
                 <> 
                 <div className="agent-info-overlay"></div>
                     <div className="agent-info-success">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlKywIMoWme-7NFzhZiu4CqNT2AaHDZAQrRA&s" alt="" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyGWPA5b2iSxCN7HkKiPk5MFqA_1TFd_SmZw&s" alt="" />
                         <p className='agent-info-success-txt1'>Agent Info Successfully Added</p>
                         <p className='agent-info-success-txt2' >Please Keep Window Open for Location Tracking.</p>
                         <p className='agent-info-success-txt3'>Have a Coffe While Location is Being Fetched</p>

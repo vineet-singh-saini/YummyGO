@@ -1,6 +1,7 @@
 const express = require ('express');
 const app = express();
-const port = 3001;
+require("dotenv").config();
+const port = process.env.PORT
 const {Server} = require ('socket.io');
 const http = require ('http');
 const cors = require ('cors');
@@ -13,7 +14,7 @@ const server = http.createServer(app);
 app.use(cors());
 const io = new Server(server,{
     cors: {
-        origin: "http://localhost:5173", 
+        origin: "https://yummy-go-six.vercel.app", 
     methods: ["GET", "POST"]
     },
 });

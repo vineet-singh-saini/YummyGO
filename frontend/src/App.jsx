@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Home from './Pages/Home/Home'
 import Cart from './Pages/Cart/Cart'
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
-import About from './Pages/About/About'
+
 import { useState } from 'react'
 import Login from './Components/Login/Login'
 import DeliveryInfo from './Pages/PlaceOrder/DeliveryInfo'
@@ -22,7 +22,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/delivery-info' element={<DeliveryInfo/>}/>
         <Route path='/place-order' element={<PlaceOrder/>}/>
-        <Route path='/About' element={<About/>}/> 
+        
         <Route path='/delivery-agent-live-tracking' element={<LivePage/>} />
       </Routes>
     </div>

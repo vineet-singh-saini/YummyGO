@@ -56,6 +56,7 @@
   justify-content: left;
   width: 70%;
   height: 99%;
+  
 }
 
 .fd-name-img-div {
@@ -71,11 +72,16 @@
   width: 5rem;
 }
 
-.fd-name p,
+
 .fd-desc p,
 .fd-price p {
   margin: 0.5rem 0;
   font-size: 1rem; 
+  text-align: left;
+}
+.fd-name p {
+  margin: 0.5rem 0;
+  font-size: 0.86rem; 
   text-align: left;
 }
 
