@@ -79,7 +79,7 @@ const PlaceOrder = () => {
           <p><strong>Total:</strong> ${getTotalCartAmount() + 5}</p>
         </div>
 
-        <button className="place-order-btn" onClick={ ()=> {placeOrderHandler}}>Place Order</button>
+        <button className="place-order-btn" onClick={ ()=> {placeOrderHandler()}}>Place Order</button>
         <p className="go-back-note">To remove items, go back to the cart.</p>
       </div>
 
